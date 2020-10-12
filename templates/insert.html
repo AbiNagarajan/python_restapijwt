@@ -30,7 +30,7 @@
         box-shadow: 0 5px #666;
         transform: translateY(4px);
         }
-    input[type=text],[type=password] {
+    input[type=text] {
         width: 25%;
         padding: 12px 20px;
         margin: 40px 0;
@@ -46,16 +46,13 @@
     input[type=text]:focus {
         border: 3px solid #555;
         }
-    input[type=password]:focus {
-        border: 3px solid #555;
-        }
         </style>
     </head>
 <body>
 <form name="insert" action = "http://127.0.0.1:5000/insertdetail" method = "POST">
 <center>Item Name <input type="text" name="elecname" placeholder="Enter item's name" required><br>
 
-        Price <input type="text" name="elecprice" placeholder="Enter item's price" required><br>
+        Price &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="elecprice" placeholder="Enter item's price" required><br>
 
     <br><br><br>
     <button class="button">Insert</button></center></b>
