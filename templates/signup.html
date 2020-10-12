@@ -1,0 +1,72 @@
+<!--When user wants to register, this page pops up-->
+<html>
+<head>
+<title>Register</title>
+<style>
+    html,body {
+        background-image: url("/static/back1.jpeg");
+        height: 80%;
+        background-repeat: no-repeat;
+        background-size: cover
+        }
+    .button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        }
+
+    .button:hover {background-color: #3e8e41}
+
+    .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+        }
+    input[type=email],[type=password] {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 40px 0;
+        background-color: #c3c3ee;
+        color: rgb(19, 19, 19);
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        }
+
+    input[type=text]:focus {
+        border: 3px solid #555;
+        }
+    input[type=password]:focus {
+        border: 3px solid #555;
+        }
+    input[type=email]:focus {
+        border: 3px solid #555;
+        }
+</style>
+</head>
+<body>
+   <center> <font face="ArialBlack"><h2>Sign Up</h2></font></center>
+  <b>  <form name="details" action = "http://127.0.0.1:5000/reg" method = "POST">
+<center>Email id <input type="email" name="email" placeholder="Enter your email id" required><br>
+
+        Password <input type="password" name="passwordentered" placeholder="Enter your password" required><br>
+
+        Role <input type="radio" name="radio1" value="seller">Seller
+
+        <input type="radio" name="radio1" value="buyer">Buyer
+        <br><br><br>
+        <button class="button">Register</button></center></b>
+        </form>
+</body>
+<html>
