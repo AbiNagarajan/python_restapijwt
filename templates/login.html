@@ -1,0 +1,68 @@
+<!--When the registered user want to login, this page pops up-->
+<html>
+<head><title>Login</title>
+    <style>
+        html,body {
+        background-image: url("/static/login.jpeg");
+        height: 80%;
+        background-repeat: no-repeat;
+        background-size: cover
+        }
+    .button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        }
+
+    .button:hover {background-color: #3e8e41}
+
+    .button:active {
+        background-color: #613e8e;
+        box-shadow: 0 5px rgb(218, 191, 191);
+        transform: translateY(4px);
+        }
+    input[type=email],[type=password] {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 40px 0;
+        background-color: #8feec9;
+        color: rgb(19, 19, 19);
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        }
+
+    input[type=text]:focus {
+        border: 3px solid #555;
+        }
+    input[type=password]:focus {
+        border: 3px solid #555;
+        }
+    input[type=email]:focus {
+        border: 3px solid #555;
+        }
+    </style>
+</head>
+<body bgcolor="yellow">
+    <center> <font face="ArialBlack"><h2>Login</h2></font></center>
+<form name="basic" action = "http://127.0.0.1:5000/login" method = "POST">
+    
+  <b> 
+<center>Email id <input type="email" name="emailuser1" placeholder="Enter your email id" required><br>
+
+        Password <input type="password" name="passwordentered1" placeholder="Enter your password" required><br>
+<button class="button">Login</button>
+</form>
+</body>
+</html>
