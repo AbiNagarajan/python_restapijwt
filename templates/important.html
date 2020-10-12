@@ -1,0 +1,84 @@
+<!--Details of the items list displayed to the buyer-->
+<!doctype html>
+<html>
+   <head>
+      <style>
+         table {
+           border-collapse: collapse;
+           width: 75%;
+         }
+         
+         th, td {
+           padding: 8px;
+           text-align: left;
+           border-bottom: 1px solid rgb(202, 25, 25);
+         }
+         tr:nth-child(even){background-color: #f2f2f2}
+         tr:hover {background-color:#9bdb23;}
+         th {
+            background-color: #4CAF50;
+            color: white;
+         }
+         .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #f76deb;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 9px rgb(228, 172, 241);
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #cf1892;
+            box-shadow: 0 5px rgb(218, 191, 191);
+            transform: translateY(4px);
+        }
+        a:link {
+            text-decoration: none;
+            }
+
+        a:visited {
+            text-decoration: none;
+            }
+
+        a:hover {
+            text-decoration: underline;
+            }
+
+        a:active {
+            text-decoration: underline;
+            }
+      </style>
+   </head>
+   
+   <body>
+      <form action = "http://127.0.0.1:5000/viewdetailsbuyer">
+         <center><button class="button">View Details</button></center>
+         </form>
+        <br><br>
+     <center> <table border = 1>
+         <thead>
+            <th>Item Name</th>
+            <th>Price</th>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+                
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+            </tr>
+         {% endfor %}
+      </table></center>
+      <center>
+         <a href="logoutbuyer">Return to homepage</a></center>
+         </body>
+</html>
